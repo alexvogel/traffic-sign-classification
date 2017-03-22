@@ -1,6 +1,6 @@
-#**Traffic Sign Recognition** 
+# **Traffic Sign Recognition** 
 
-##Writeup
+## Writeup
 
 ---
 
@@ -31,9 +31,9 @@ The goals / steps of this project are the following:
 
 ## Rubric Points
 ---
-###Writeup / README
+### Writeup / README
 
-###D ata Set Summary & Exploration
+### Data Set Summary & Exploration
 
 #### 1. Basic summary of the data set
 
