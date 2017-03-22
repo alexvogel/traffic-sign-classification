@@ -253,6 +253,6 @@ Visualization of the predictions with a bar charts:
 
 ### Visualization Activations of Convolutional Layers
 
-The conv1 layer activation visualization shows that filters activate because of the shape of the sign (filter #9, #12, #14) and the arrow #4, #16, #23 and #26). There are filters which activate also on the background (#23, #26). That shows that the convnet learns on different aspects of the content and in later fully connected layers is able to compose these filter impressions into patterns that all images of a certain sign share. The more unique these pattern are, the more confident the network in its predictions.
+The conv1 layer activation visualization shows that filters activate because of the shape of the sign (filter #9, #12, #14) and the arrow #4, #16, #23 and #26). There are filters which activate also on the background (#23, #26). That shows that the convnet learns on different aspects of the content and in later fully connected layers is able to compose these filter impressions into patterns that all images of a certain sign share. The more unique these pattern are, the more confident the network is in its predictions.
 
 ![alt text][image12]
