@@ -163,8 +163,8 @@ The test accuray (0.941) is very near the validation accuracy (0.958). That prov
 
 Here are five German traffic signs that I took in Munich:
 
-##### Image 1 - Yield
-![alt text][image5]
+##### Image 1 - Yield ![alt text][image5]
+
 This image might be difficult to classify, because...
 * There is a building on the lower left side corner in the background. This might obscure the shape of the sign.
 * The perspective of the photo is not perfect. This results in a distortion and a rotation of the shape.
@@ -173,8 +173,8 @@ This image might be difficult to classify, because...
 This image might be good to classify, because...
 * The edge of the sign is clearly recognizable against the sky most of the time, making the shape good recognizable
 
-##### Image 2 - No entry
-![alt text][image6]
+##### Image 2 - No entry ![alt text][image6]
+
 This image might be difficult to classify, because...
 * The the photo is shot from the side. This results in a distortion of the shape. It appears more like an oval than a circle.
 
@@ -182,8 +182,8 @@ This image might be good to classify, because...
 * The contrast inside the sign is very good.
 * The edge of the sign is clearly recognizable against the uniformly dark background.
 
-##### Image 3 - Turn right ahead
-![alt text][image7] 
+##### Image 3 - Turn right ahead ![alt text][image7] 
+
 This image might be difficult to classify, because...
 * The branches of the tree in the background obscuring the edge of the sign and possibly weakening the recognition of the shape of the sign.
 
@@ -191,8 +191,8 @@ This image might be good to classify, because...
 * The perspective is very good, strengthening the recognition of the shape.
 * The contrast inside the sign is very good.
 
-##### Image 4 - Road narrows on the right
-![alt text][image8]
+##### Image 4 - Road narrows on the right ![alt text][image8]
+
 This image might be difficult to classify, because...
 * The background is very alternating in brightness, color, and shapes. This could make the recognition of the shape of the sign harder.
 
@@ -200,8 +200,8 @@ This image might be good to classify, because...
 * The perspective is very good. This strengthens the recognition of the shape.
 * The contrast inside the sign is very good.
 
-##### Image 5 - Yield
-![alt text][image9]
+##### Image 5 - Yield ![alt text][image9]
+
 This image might be difficult to classify, because...
 * The contrast inside the sign is low. This could make the distinction between the white center and the dark border line harder.
 * The background is alternating in brighness, which could make the recognition of the shape of the sign harder.
@@ -209,8 +209,8 @@ This image might be difficult to classify, because...
 This image might be good to classify, because...
 * The perspective is very good. This strengthens the recognition of the shape.
 
-##### Image 6 - Speed limit (60km/h)
-![alt text][image10]
+##### Image 6 - Speed limit (60km/h) ![alt text][image10]
+
 This image might be difficult to classify, because...
 * The background is alternating in brighness and shapes, which could make the recognition of the shape of the sign harder.
 
