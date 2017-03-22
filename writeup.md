@@ -28,6 +28,7 @@ The goals / steps of this project are the following:
 [image9]: ./traffic-signs-for-classification/IMG_20170308_121403.png "Traffic Sign 5"
 [image10]: ./traffic-signs-for-classification/IMG_20170308_122420.png "Traffic Sign 6"
 [image11]: ./writeup_images/bar_chart_my_signs.png "Classification Result with Softmax"
+[image12]: ./writeup_images/vis_conv1.png "Activations of Conv1"
 
 ## Rubric Points
 ---
@@ -250,3 +251,8 @@ For the sixth image, the model is absolutely sure that this is a Speed limit (60
 Visualization of the predictions with a bar charts:
 ![alt text][image11]
 
+### Visualization Activations of Convolutional Layers
+
+The conv1 layer activation visualization shows that filters activate because of the shape of the sign (filter #9, #12, #14) and the arrow #4, #16, #23 and #26). There are filters which activate also on the background (#23, #26). That shows that the convnet learns on different aspects of the content and in later fully connected layers is able to compose these filter impressions into patterns that all images of a certain sign share. The more unique these pattern are, the more confident the network in its predictions.
+
+![alt text][image12]
