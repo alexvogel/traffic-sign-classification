@@ -50,21 +50,21 @@ signs data set:
 
 #### 2. Visualization of the dataset.
 
-The code for this step is contained in the fifth and sixth code cell of the IPython notebook.  
+The code for this step is contained in the 5th and 6th code cell of the IPython notebook.  
 
 Here is an exploratory visualization of the data set and a bar chart showing the distribution of sign types
 
 ![alt text][image1]![alt text][image2]
 
-###Design and Test of the Model Architecture
+### Design and Test of the Model Architecture
 
-#### 1. Description of Preprocessing of the Image dData.
+#### 1. Description of Preprocessing of the Image Data.
 
 The code for this step is contained in the 20th code cell of the IPython notebook.
 
-As a first step, I decided to convert the images to grayscale because this would speed up training time without decreasing prediction quality.
+As a first step, I decided to convert the images to greyscale because this would speed up training time without decreasing prediction quality.
 
-Here is an example of a traffic sign image after grayscaling.
+Here is an example of a traffic sign image after greyscaling.
 
 ![alt text][image3]
 
@@ -72,13 +72,13 @@ As a last step, I normalized the image. So that all values are between 0. and 1.
 
 #### 2. Augmentation, Training, Validation and Testing Data.
 
-I used the training, validation and test data as it was provided by udacity
+I used the training, validation and test data as it was provided.
 
 * The size of training set is 34799
 * The size of validation set is 4410
 * The size of test set is 12630
 
-to increase the number of training data, to balance out the vastly uneven distribution of sign types in the training data I generated additional data from the existent images.
+to increase the number of training data and to balance out the vastly uneven distribution of sign types in the training data, I generated additional data from the existent images.
 
 I generated new data (especially for the signs with low occurance) by
 * rotation by -1, -2, 1, and 2 degrees around the center of the images
@@ -86,7 +86,7 @@ I generated new data (especially for the signs with low occurance) by
 
 The data augmentation is realized in the 11th code cell of the IPython notebook. 
 
-This increased the size of the training set from 34799 to 302864 images and balanced out the distribution of different sign type quite good
+This step increased the size of the training set from 34799 to 302864 (â‰lmost 10x!) images and balanced out the distribution of different sign type quite good
 
 ![alt text][image4]
 
@@ -112,15 +112,14 @@ My final model consisted of the following layers:
 | RELU					|												|
 | Dropout				| 0.7											|
 | Max pooling	      	| 2x2 stride,  outputs 4x4x128 		    		|
-| Fully connected		| 1024       									|
+| Fully connected FC1	| 1024       									|
 | RELU          		|            									|
 | Dropout				| 0.7											|
-| Fully connected		| 512       									|
+| Fully connected FC2	| 512       									|
 | RELU          		|            									|
 | Dropout				| 0.7											|
-| Fully connected		| 43       		    							|
+| Fully connected FC3	| 43       		    							|
 | Softmax				|             									|
-|						|												|
  
 
 #### 4. Hyperparameters
@@ -144,16 +143,16 @@ Validation accuracy maxed at 0.91 and test accuracy was at 0.83.
 To increase the over all accuracy I introduced an additional convolutional layer and an additional fully connected layer.
 The gap between validation accuracy and test accuracy indicates overfitting. To reduce this gap I introduced dropouts (0.7) after conv2, con3, fc1 and fc2
 
-The learning rate of 0.001 and 0.00001 didn't work - with that rates the validation accuracy remained at 0.05 through all epochs.
+The learning rate of 0.001 and 0.00001 didn't work - with these rates the validation accuracy remained at 0.05 through all epochs.
 
-I generated as much new training data as there were no memory errors while training
+I generated as much new training data as possible that threw no memory errors when I started the training.
 
 The most important measures were to introduce dropout and to augment the training data to increase training samples and to balance the occurance of sign types.
 
 My final model results were:
-* validation set accuracy of 0.958
-* test set accuracy of 0.941
-* accuracy on my traffic signs 1.0
+* validation set accuracy: 0.958
+* test set accuracy: 0.941
+* accuracy on my traffic signs: 1.0
 
 The test accuray (0.941) is very near the validation accuracy (0.958). That proves that the model works well, generalizes well and does not overfit.
 
@@ -184,7 +183,7 @@ Here are the results of the prediction:
 
 The model was able to correctly guess 6 of the 6 traffic signs, which gives an accuracy of 100%. This compares favorably to the accuracy on the test set of 94.1%
 
-#### 3. Certaintity of the Model when Predicting new Images
+#### 3. Certainty of the Model when Predicting new Images
 
 The code for making predictions on my final model is located in the 33th cell of the Ipython notebook.
 
@@ -242,12 +241,12 @@ For the sixth image, the model is absolutely sure that this is a Speed limit (60
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 1.0                   | Speed limit (60km/h)				    		| 
-| 0.0                	| Speed limit (80km/h) 							|
-| 0.0           		| Speed limit (50km/h)							|
-| 0.0            	    | Turn left ahead   					 		|
-| 0.0           		| Ahead only                  					|
+| 1.00000000e+00        | Speed limit (60km/h)				    		| 
+| 1.79725904e-13       	| Speed limit (80km/h) 							|
+| 1.41033235e-13    	| Speed limit (50km/h)							|
+| 2.86833238e-21        | Turn left ahead   					 		|
+| 9.85496641e-22        | Ahead only                  					|
 
-Visualization of the predictions with a bar chart:
+Visualization of the predictions with a bar charts:
 ![alt text][image11]
 
